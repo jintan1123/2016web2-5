@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
     <script type="text/babel">
-      var CommentList = React.createClass({
+      var CommentList = ReactDOM.createClass({
           render: function() {
               var comments = this.props.comments.map(function(comment, index) {
                   return <li key={index}>{comment}</li>;
@@ -22,7 +22,7 @@
           }
       });
 
-      var CommentApp = React.createClass({
+      var CommentApp = ReactDOM.createClass({
           getInitialState: function() {
               return {
                   comments: [],
@@ -59,7 +59,7 @@
               );
           }
       });
-      React.render(<CommentApp />, document.getElementById('container'));
+      ReactDOM.render(<CommentApp />, document.getElementById('container'));
     </script>
   </body>
 </html>
