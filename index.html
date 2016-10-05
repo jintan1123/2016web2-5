@@ -22,10 +22,10 @@
       var CommentList = React.createClass({
           render: function() {
               var comments = this.props.comments.map(function(comment, index) {
-                  return <li className="list-group-item" key={index}>{comment}</li>;
+                  return <ons-list-item key={index}>{comment}</ons-list-item>;
               });
               return (
-                  <ul className="list-group">{comments}</ul>
+                  <ons-list>{comments}</ons-list>
               );
           }
       });
