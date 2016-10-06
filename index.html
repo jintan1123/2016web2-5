@@ -58,22 +58,22 @@
           render: function() {
               return (
                   <div>
-                      <form
-                        className="comment-form"
-                        onSubmit={this.handleSubmit} >
-                        <ons-row>
-  <ons-col width="70px" align = "center">
+                    <form
+                      className="comment-form"
+                      onSubmit={this.handleSubmit} >
+                    <ons-row>
+                      <ons-col width="70%" align = "center">
                         <input class="text-input"
                           type="text"
                           value={this.state.inputValue}
                           onChange={this.handleChange} />
-  </ons-col>
-  <ons-col>
-                        <ons-button type="submit" onClick={this.handleSubmit}>add</ons-button>
-</ons-col>
-      </ons-row>
-　　                   </form>
-                       <CommentList comments={this.state.comments} />
+                        </ons-col>
+                        <ons-col>
+                          <ons-button type="submit" onClick={this.handleSubmit}>add</ons-button>
+                        </ons-col>
+                      </ons-row>
+　　                </form>
+                    <CommentList comments={this.state.comments} />
                   </div>
               );
           }
