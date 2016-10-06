@@ -5,15 +5,15 @@
     <title>ローカルチャット</title>
   </head>
   <body>
-    <ons-page>
-      <ons-toolbar>
+    <Ons.Page>
+      <Ons.Toolbar>
         <div class="center">ローカルチャット</div>
-      </ons-toolbar>
+      </Ons.Toolbar>
       <div style="text-align: center;">
         <p>コメントを入力してください</p>
         <div id="container"> <!-- この内容が置き換えられる --> </div>
       </div>
-    </ons-page>
+    </Ons.Page>
 
     <link rel="stylesheet" href="css/onsenui.css">
     <link rel="stylesheet" href="css/onsen-css-components.css">
@@ -27,10 +27,10 @@
       var CommentList = React.createClass({
           render: function() {
               var comments = this.props.comments.map(function(comment, index) {
-                  return <ons-list-item key={index}>{comment}</ons-list-item>;
+                  return <Ons.List-item key={index}>{comment}</Ons.List-item>;
               });
               return (
-                  <ons-list>{comments}</ons-list>
+                  <Ons.List>{comments}</Ons.List>
               );
           }
       });
@@ -61,19 +61,19 @@
                     <form
                       className="comment-form"
                       onSubmit={this.handleSubmit} >
-                      <ons-row align = "center">
-                        <ons-col width="60%" align = "right">
+                      <Ons.Row align = "center">
+                        <Ons.Col width="60%" align = "right">
                           <input class="text-input"
                             type="text"
                             value={this.state.inputValue}
                             onChange={this.handleChange} />
-                        </ons-col>
-                        <ons-col width="5%" align = "right">
-                        </ons-col>
-                        <ons-col align = "left">
+                        </Ons.Col>
+                        <Ons.Col width="5%" align = "right">
+                        </Ons.Col>
+                        <Ons.Col align = "left">
                           <Ons.Button type="submit" onClick={this.handleSubmit}>add</Ons.Button>
-                        </ons-col>
-                      </ons-row>
+                        </Ons.Col>
+                      </Ons.Row>
 　　                </form>
                     <CommentList comments={this.state.comments} />
                   </div>
