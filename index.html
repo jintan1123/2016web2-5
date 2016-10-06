@@ -19,9 +19,8 @@
     <script src="js/react-onsenui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
     <script type="text/babel">
-    import React from 'react';
-    import Ons from 'react-onsenui';
-    import onsen from 'onsenui';
+      import ons from 'onsenui';
+      import {Page, Toolbar, Button} from 'react-onsenui';
       var CommentList = React.createClass({
           render: function() {
               var comments = this.props.comments.map(function(comment, index) {
@@ -63,7 +62,7 @@
                               type="text"
                               value={this.state.inputValue}
                               onChange={this.handleChange} />
-                          <Ons.Button modifier="large--cta" type="submit">add</Ons.Button>
+                          <Button type="submit">add</Button>
                       </form>
                       <CommentList comments={this.state.comments} />
                   </div>
