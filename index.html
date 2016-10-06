@@ -61,13 +61,14 @@
                     <form
                       className="comment-form"
                       onSubmit={this.handleSubmit} >
-                    <ons-row align = "center">
-                      <ons-col width="70%" align = "right">
-                        <input class="text-input"
-                          width="90%"
-                          type="text"
-                          value={this.state.inputValue}
-                          onChange={this.handleChange} />
+                      <ons-row align = "center">
+                        <ons-col width="70%" align = "right">
+                          <input class="text-input"
+                            type="text"
+                            value={this.state.inputValue}
+                            onChange={this.handleChange} />
+                        </ons-col>
+                        <ons-col width="70%" align = "right">
                         </ons-col>
                         <ons-col align = "left">
                           <ons-button type="submit" onClick={this.handleSubmit}>add</ons-button>
