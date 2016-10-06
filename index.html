@@ -65,8 +65,8 @@
                               type="text"
                               value={this.state.inputValue}
                               onChange={this.handleChange} />
-                          <ons-button type="submit">add</ons-button>
-                      </form>
+　　                    </form>
+                        <ons-button type="submit" onClick={this.handleSubmit}>add</ons-button>
                       <CommentList comments={this.state.comments} />
                   </div>
               );
